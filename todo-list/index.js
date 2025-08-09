@@ -34,8 +34,8 @@ const descInput = document.querySelector("#desc");
 
 document.querySelector("#add-task").addEventListener("click", () => {
     const task = {
-        title: titleInput.value,
-        desc: descInput.value,
+        title: titleInput.value.trim(),
+        desc: descInput.value.trim(),
         done: false
     }
     createTask(task);
