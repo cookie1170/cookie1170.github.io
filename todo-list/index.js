@@ -39,6 +39,9 @@ document.querySelector("#add-task").addEventListener("click", () => {
         done: false
     }
     createTask(task);
+
+    titleInput.value = "";
+    descInput.value = "";
 })
 
 document.querySelector("#clear-all").addEventListener("click", async () => {
@@ -49,6 +52,12 @@ document.querySelector("#clear-all").addEventListener("click", async () => {
 })
 
 function createTask(task) {
+    if (task.title.length <= 0)
+    {
+        alert("Please input task title");
+        return;
+    }
+
     for (const item of tasks)
     {
         if (item.title == task.title)
@@ -57,6 +66,7 @@ function createTask(task) {
             return;
         }
     }
+
     tasks.push(task);
     addTask(task.title, task.desc, task.done);
     document.cookie = JSON.stringify(tasks);
