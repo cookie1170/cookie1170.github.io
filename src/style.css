@@ -1,0 +1,140 @@
+.normal-button, a {
+    color: beige;
+    background-color: #181A1B;
+    border-radius: 16px;
+    border: lightgrey solid 3px;
+    margin: 10px;
+    padding: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: black 1px 1px 1px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    accent-color: beige;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.normal-button:hover, .normal-button:focus, a:hover, a:focus {
+    background-color: #2B2F31;
+    box-shadow: lightgrey 0 0 0 4px;
+    transition: all 0.1s ease-in-out;
+}
+
+.normal-button:active, a:active {
+    background-color: #181A1B;
+    box-shadow: lightgrey 0 0 0 0;
+}
+
+.trash-button {
+    background: url("/assets/images/trash.svg");
+    background-size: contain;
+    margin: 8px;
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.trash-button:hover, .trash-button:focus {
+    transform: scale(1.2);
+}
+
+.trash-button:active {
+    transform: scale(0.9);
+}
+
+body {
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    background-color: #1C1E1F;
+}
+
+#layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: none;
+    background-color: #181A1B;
+    padding: 16px;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+#content {
+    margin-left: 16px;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    accent-color: beige;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    margin: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    background-color: #181A1B;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+textarea, input {
+    font-family: 'Rubik', sans-serif;
+    resize: none;
+    background-color: #181A1B;
+    color: beige;
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: lightgrey solid 2px;
+    accent-color: beige;
+}
+
+.title-input {
+    width: 40%;
+    font-weight: bold;
+    font-size: 24px;
+    border: medium;
+}
+
+input[type=checkbox] {
+    accent-color: beige;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.hidden {
+    transition: all 0.2s;
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
